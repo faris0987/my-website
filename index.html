@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+      color: white;
+    }
+
+    /* Background Video */
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Content on top */
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4); /* slight dark overlay */
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4b2b;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff6b4b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Foreground content -->
+  <div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample page with a video background.</p>
+    <button>Explore</button>
+  </div>
+
+</body>
+</html>
